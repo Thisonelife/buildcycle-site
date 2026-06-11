@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- ==========================================================================
+  BUILDCYCLE SITE SHELL — copy this file to start any sibling page
+  (pricing.html, procore-integration.html, terms.html, privacy.html, …)
+
+  HOW TO USE
+  1. Copy this file and rename it (e.g. pricing.html).
+  2. Replace <title>, meta description, and og:title / og:description.
+  3. Replace everything between the PAGE CONTENT markers.
+  4. Leave the head block, <header>, <footer>, and the bottom <script> as-is —
+     they are shared chrome and must stay identical across pages.
+
+  DESIGN RULES (system of record: _direction-b-reference.html + styles.css)
+  - Anything on solid yellow (--yellow) uses --ink (#1C1C1E). Never white.
+  - Hazard stripes (.hazard) are used sparingly — not a general divider.
+  - Display type: Big Shoulders 800/900, uppercase. Stencil (Saira Stencil
+    One) only for stamps/numbers. Mono (IBM Plex Mono) for tags and nav.
+  - Dark sections: .sec-dark.sec-pad — light sections: .sec-concrete.sec-pad
+  - Section headers: .sec-head (add .sec-head--dark on dark backgrounds).
+  - First section needs top padding clear of the fixed 72px header, e.g.
+    style="padding-top: calc(var(--nav-h) + 64px)" or use a hero-style block.
+========================================================================== -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- PER-PAGE: title + descriptions -->
+<title>PAGE TITLE — BuildCycle</title>
+<meta name="description" content="PAGE DESCRIPTION">
+<meta property="og:title" content="PAGE TITLE — BuildCycle">
+<meta property="og:description" content="PAGE DESCRIPTION">
+<meta property="og:type" content="website">
+
+<!-- SHARED: fonts + stylesheet (do not modify) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,500;10..72,700;10..72,800;10..72,900&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&family=Saira+Stencil+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+
+<!-- PER-PAGE: small page-specific styles only; shared styles go in styles.css
+<style>
+</style>
+-->
+</head>
+<body>
+
+<!-- ================= SHARED NAV (do not modify) ================= -->
+<header>
+  <div class="wrap nav">
+    <a class="wordmark" href="/">Build<span class="blk">Cycle</span></a>
+    <ul class="nav-links">
+      <li><a href="/#work">Workflows</a></li>
+      <li><a href="/procore-integration.html">Procore Integration</a></li>
+      <li><a href="/pricing.html">Pricing</a></li>
+      <li><a href="https://app.buildcycle.io">Sign in</a></li>
+    </ul>
+    <a class="nav-cta" href="https://app.buildcycle.io">Start free trial</a>
+    <button class="nav-burger" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu">Menu</button>
+  </div>
+  <ul class="nav-menu" id="nav-menu">
+    <li><a href="/#work">Workflows</a></li>
+    <li><a href="/procore-integration.html">Procore Integration</a></li>
+    <li><a href="/pricing.html">Pricing</a></li>
+    <li><a href="https://app.buildcycle.io">Sign in</a></li>
+  </ul>
+</header>
+
+<!-- PAGE CONTENT -->
+<!-- Replace this block. Example skeleton:
+
+<section class="sec-dark sec-pad" style="padding-top: calc(var(--nav-h) + 80px);">
+  <div class="wrap">
+    <div class="sec-head sec-head--dark rv in">
+      <div>
+        <span class="tag"><b>SEC. 01</b> &nbsp;/&nbsp; Eyebrow text</span>
+        <h2>Page heading.<br><span class="pale">Outlined line.</span></h2>
+      </div>
+      <p>Short side paragraph, ~36ch max.</p>
+    </div>
+    ... page body ...
+  </div>
+</section>
+
+-->
+<!-- /PAGE CONTENT -->
+
+<!-- ================= SHARED FOOTER (do not modify) ================= -->
+<footer>
+  <div class="wrap foot">
+    <a class="wordmark" href="/">Build<span class="blk">Cycle</span></a>
+    <ul class="foot-links">
+      <li><a href="/pricing.html">Pricing</a></li>
+      <li><a href="/procore-integration.html">Procore Integration</a></li>
+      <li><a href="/terms.html">Terms</a></li>
+      <li><a href="/privacy.html">Privacy</a></li>
+      <li><a href="mailto:support@buildcycle.io">support@buildcycle.io</a></li>
+    </ul>
+    <span class="foot-legal">&copy; 2026 BuildCycle &middot; Built on job sites, not in boardrooms</span>
+  </div>
+</footer>
+
+<!-- ================= SHARED JS: reveals + mobile nav (do not modify) ================= -->
+<script>
+// Scroll reveals — add class="rv" (+ rv-d1/d2/d3 for stagger) to elements
+const io = new IntersectionObserver((entries) => {
+  for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.rv:not(.in)').forEach(el => io.observe(el));
+
+// Mobile nav
+const burger = document.querySelector('.nav-burger');
+const menu = document.getElementById('nav-menu');
+burger.addEventListener('click', () => {
+  const open = menu.classList.toggle('open');
+  burger.setAttribute('aria-expanded', String(open));
+});
+menu.addEventListener('click', (e) => {
+  if (e.target.tagName === 'A') { menu.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); }
+});
+</script>
+
+</body>
+</html>
