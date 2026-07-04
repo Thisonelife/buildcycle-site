@@ -61,6 +61,45 @@
 @media (max-width: 860px){
   .commits li{ grid-template-columns: 1fr; padding: 20px 0 18px; }
 }
+
+/* ---- workflow drawing frame (copied from procore-integration.html) ---- */
+.dwg-frame{
+  background: var(--paper);
+  border: 1px solid var(--hairline-l);
+  box-shadow: 10px 10px 0 0 var(--steel);
+  padding: clamp(14px, 2.4vw, 28px);
+}
+.dwg-frame img{ display:block; width:100%; height:auto; }
+.dwg-bar{
+  display:flex; align-items:baseline; justify-content:space-between; gap: 18px;
+  flex-wrap: wrap;
+  border-bottom: 1px dashed var(--hairline-l);
+  padding-bottom: 12px; margin-bottom: clamp(14px, 2vw, 22px);
+}
+.dwg-bar .dwg-id{
+  font-family: var(--mono); font-size: 12px; font-weight: 600;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--ink);
+}
+.dwg-bar .dwg-id em{ font-style: normal; color: var(--steel-light); }
+.dwg-bar .dwg-scale{
+  font-family: var(--stencil); font-size: 12px; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--steel);
+}
+.dwg-cap{
+  margin-top: 22px;
+  font-family: var(--mono); font-size: 12px; line-height: 1.7;
+  letter-spacing: .06em; text-transform: uppercase;
+  color: var(--steel);
+  max-width: 92ch;
+  display:flex; gap: 11px; align-items: baseline;
+}
+.dwg-cap::before{
+  content:""; width: 7px; height: 7px; background: var(--yellow);
+  transform: rotate(45deg); flex: none; position: relative; top: -1px;
+}
+@media (max-width: 560px){
+  .dwg-frame{ box-shadow: 6px 6px 0 0 var(--steel); }
+}
 </style>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
@@ -143,6 +182,27 @@
       </div>
       <p>Each Procore project is linked individually via OAuth 2.0 from BuildCycle&rsquo;s integrations page, using the connected Procore account&rsquo;s own permissions. Open RFIs and submittals &mdash; with approver workflows and attachments &mdash; sync in on connect and refresh during use. Full product details: <a href="/procore-integration.html">buildcycle.io/procore-integration</a>.</p>
     </div>
+
+    <div class="sec-head rv" style="margin-top: 8px;">
+      <div>
+        <span class="tag"><b>REF. 03</b> &nbsp;/&nbsp; Workflow diagram</span>
+        <h2>The sync,<br><span class="pale">drawn out.</span></h2>
+      </div>
+      <p>Data-flow reference for the RFI and submittal round trip between Procore and BuildCycle.</p>
+    </div>
+
+    <figure class="dwg-frame rv">
+      <div class="dwg-bar" aria-hidden="true">
+        <span class="dwg-id">DWG <em>IN-001</em> &middot; RFI &amp; SUBMITTAL SYNC</span>
+        <span class="dwg-scale">Scale: NTS</span>
+      </div>
+      <img src="/assets/integration-workflow.png" alt="BuildCycle + Procore integration workflow diagram">
+      <figcaption class="dwg-cap">
+        How an RFI or submittal travels: synced from Procore with its approver workflow and attachments,
+        routed to consultants by discipline, reviewed by the prime, then posted back to Procore
+        as a formal reply or approver response.
+      </figcaption>
+    </figure>
   </div>
 </section>
 <!-- /PAGE CONTENT -->
