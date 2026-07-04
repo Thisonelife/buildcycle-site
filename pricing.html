@@ -67,6 +67,11 @@
 /* comparison band — strip the sync arrow from the inherited note */
 .fair-note::before{ content:"▰"; font-size: 10px; }
 
+/* seat-math comparison: two-up on desktop, stacked on phones */
+.tiers--seatmath{ grid-template-columns: repeat(2, minmax(0,1fr)); max-width: 860px; }
+.tiers--seatmath .tier:last-child{ grid-column: auto; }
+@media (max-width: 768px){ .tiers--seatmath{ grid-template-columns: 1fr; } }
+
 @media (max-width: 560px){
   .bill-btn{ flex: 1 1 auto; padding: 12px 12px 11px; }
   .qa{ grid-template-columns: 1fr; gap: 12px; padding: 26px 0 24px; }
@@ -196,7 +201,7 @@
       <p>Construction administration is the phase that quietly eats the fee — and the software for it is usually priced per seat, so every consultant added to the job raises the bill and teams leave people out. BuildCycle is priced by active projects: the whole team, in-house and out, works under one flat price, and answers move instead of waiting on someone&rsquo;s license.</p>
     </div>
 
-    <div class="tiers" style="grid-template-columns: repeat(2, minmax(0,1fr)); max-width: 860px;">
+    <div class="tiers tiers--seatmath">
       <div class="tier rv">
         <div class="tier-name">Per-seat tools</div>
         <div class="tier-scope">12-person project team</div>
