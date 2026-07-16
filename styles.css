@@ -520,7 +520,7 @@ h1 .ghosted{
 /* ============================================================== pricing */
 .tiers{
   display:grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, minmax(0,1fr));
   gap: 22px;
   align-items: stretch;
 }
@@ -706,7 +706,7 @@ footer{
 /* =============================================================== reveals */
 .rv{ opacity:0; transform: translateY(26px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
 .rv.in{ opacity:1; transform:none; }
-.rv-d1{ transition-delay:.08s; } .rv-d2{ transition-delay:.16s; } .rv-d3{ transition-delay:.24s; }
+.rv-d1{ transition-delay:.08s; } .rv-d2{ transition-delay:.16s; } .rv-d3{ transition-delay:.24s; } .rv-d4{ transition-delay:.32s; }
 
 /* ============================================================ responsive */
 /* tablet / small laptop */
@@ -720,7 +720,6 @@ footer{
   .feat-grid .card:last-child{ grid-column: 1 / -1; }
   .tiers .tier--hot{ transform:none; }
   .tiers .tier--hot:hover{ transform:none; }
-  .tiers .tier:last-child{ grid-column: 1 / -1; }
   .nav-links{ display:none; }
   .nav-burger{ display:block; }
   .signup-inner{ grid-template-columns: 1fr; }
