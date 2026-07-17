@@ -698,6 +698,8 @@ footer{
   transition: color .18s ease;
 }
 .foot-links a:hover{ color: var(--yellow); }
+.foot-links svg{ width:17px; height:17px; display:block; fill:currentColor; }
+.foot-links li:has(svg) a{ display:flex; align-items:center; height:100%; }
 .foot-legal{
   font-family: var(--mono); font-size: 11px; letter-spacing: .1em;
   text-transform: uppercase; color: var(--steel-light);
