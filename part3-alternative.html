@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- PER-PAGE: title + descriptions -->
+<title>Part3 Alternative — BuildCycle vs Part3 Pricing &amp; Features (2026)</title>
+<meta name="description" content="Honest BuildCycle vs Part3 comparison, July 2026: Part3 runs $150–200 per user/month (annual, ~$9,000/yr minimum). BuildCycle is flat by active projects from $39/mo, unlimited users — and includes pay applications, which Part3 doesn't have.">
+<meta property="og:title" content="Part3 Alternative — BuildCycle vs Part3 (2026)">
+<meta property="og:description" content="Part3: $150–200/user/mo, ~$9,000/yr minimum, no pay apps. BuildCycle: flat by projects from $39/mo, unlimited users, pay applications included.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://buildcycle.io/part3-alternative">
+
+<!-- SHARED: fonts + stylesheet (do not modify) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,500;10..72,700;10..72,800;10..72,900&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&family=Saira+Stencil+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+
+<!-- PER-PAGE: comparison-table styles -->
+<style>
+.cmp-scroll{ overflow-x:auto; }
+.cmp{
+  width:100%; border-collapse:collapse; min-width:640px;
+  font-size:15px; line-height:1.5;
+}
+.cmp th, .cmp td{ padding:14px 18px; text-align:left; border-bottom:1px solid var(--hairline-d); vertical-align:top; }
+.cmp thead th{
+  font-family:var(--mono); font-size:12px; font-weight:600;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--grey-mid);
+}
+.cmp .bc-col{ background:rgba(251,191,36,.06); }
+.cmp thead .bc-col{ color:var(--yellow); }
+.cmp td:first-child{ color:var(--grey-mid); }
+.cmp .num{ font-family:var(--mono); white-space:nowrap; }
+.cmp .win{ color:var(--yellow); font-weight:600; }
+.fine{ font-size:13px; color:var(--grey-mid); margin-top:18px; max-width:72ch; }
+.fine a{ color:var(--yellow); }
+/* honest two-column verdict reuses tier cards */
+.tiers--verdict{ grid-template-columns:repeat(2,minmax(0,1fr)); max-width:900px; }
+@media (max-width:768px){ .tiers--verdict{ grid-template-columns:1fr; } }
+</style>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#15171A">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does Part3 cost?",
+      "acceptedAnswer": {"@type": "Answer", "text": "As of July 2026, Part3 lists Core at $150 per user per month and Complete at $200 per user per month, billed annually. Part3's own materials state annual subscriptions start at $9,000/year, which works out to about five seats. There is no self-serve or solo tier."}
+    },
+    {
+      "@type": "Question",
+      "name": "What is the main difference between BuildCycle and Part3?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Pricing model and pay applications. Part3 charges per licensed user; BuildCycle charges a flat price by active projects with unlimited users on every tier, from $39/month. BuildCycle also includes pay applications with certified-email owner sign-off — a workflow Part3 does not offer."}
+    },
+    {
+      "@type": "Question",
+      "name": "What does Part3 do better than BuildCycle?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Part3 ships an AI submittal and spec assistant, native mobile apps with offline support, e-stamps and digital signatures, and has more integrations and years in market. If those are must-haves today, Part3 is the more mature choice."}
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ================= SHARED NAV (do not modify) ================= -->
+<header>
+  <div class="wrap nav">
+    <a class="wordmark" href="/"><img src="/assets/buildcycle-inverse.svg" alt="BuildCycle"></a>
+    <ul class="nav-links">
+      <li><a href="/#work">Workflows</a></li>
+      <li><a href="/procore-integration.html">Procore Integration</a></li>
+      <li><a href="/pricing.html">Pricing</a></li>
+      <li><a href="https://app.buildcycle.io">Sign in</a></li>
+    </ul>
+    <a class="nav-cta" href="/#updates">Join the waitlist</a>
+    <button class="nav-burger" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu">Menu</button>
+  </div>
+  <ul class="nav-menu" id="nav-menu">
+    <li><a href="/#work">Workflows</a></li>
+    <li><a href="/procore-integration.html">Procore Integration</a></li>
+    <li><a href="/pricing.html">Pricing</a></li>
+    <li><a href="https://app.buildcycle.io">Sign in</a></li>
+  </ul>
+</header>
+
+<!-- PAGE CONTENT -->
+
+<!-- ================= HERO ================= -->
+<section class="sec-dark sec-pad" style="padding-top: calc(var(--nav-h) + 80px);">
+  <div class="wrap">
+    <div class="sec-head sec-head--dark rv in">
+      <div>
+        <span class="tag"><b>COMPARISON</b> &nbsp;/&nbsp; Pricing verified July 2026</span>
+        <h2>BuildCycle vs Part3.<br><span class="pale">The honest version.</span></h2>
+      </div>
+      <p>Part3 is the most mature modern CA tool for architects — and it charges per user, starting around $9,000 a year. Here&rsquo;s exactly where each tool wins.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING TABLE ================= -->
+<section class="sec-dark sec-pad" id="pricing-comparison" style="padding-top:0;">
+  <div class="wrap">
+    <div class="sec-head sec-head--dark rv">
+      <div>
+        <span class="tag"><b>SEC. 01</b> &nbsp;/&nbsp; What you&rsquo;d actually pay</span>
+        <h2>Per user<br><span class="pale">vs per project.</span></h2>
+      </div>
+      <p>Part3 licenses every internal seat. BuildCycle prices by active projects — everyone works free, on every tier.</p>
+    </div>
+
+    <div class="cmp-scroll rv">
+      <table class="cmp">
+        <thead>
+          <tr><th>Your firm</th><th>Part3</th><th class="bc-col">BuildCycle</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Solo architect, 1&ndash;2 CA projects</td>
+            <td class="num">Not offered — annual plans start ~$9,000/yr (&asymp;$750/mo)</td>
+            <td class="num bc-col"><span class="win">$39/mo</span> (Solo, 2 active projects)</td>
+          </tr>
+          <tr>
+            <td>3&ndash;4 person firm, 5 projects</td>
+            <td class="num">$450&ndash;$800/mo (3&ndash;4 seats &times; $150&ndash;$200)</td>
+            <td class="num bc-col"><span class="win">$79/mo</span> (Starter, 5 active projects)</td>
+          </tr>
+          <tr>
+            <td>5 person firm, 8&ndash;10 projects</td>
+            <td class="num">$750&ndash;$1,000/mo ($9,000&ndash;$12,000/yr)</td>
+            <td class="num bc-col"><span class="win">$199/mo</span> (Professional, 10 active projects)</td>
+          </tr>
+          <tr>
+            <td>Larger studio, unlimited projects</td>
+            <td class="num">$150&ndash;$200 &times; every licensed seat</td>
+            <td class="num bc-col"><span class="win">$499/mo flat</span> (Unlimited)</td>
+          </tr>
+          <tr>
+            <td>Consultants, GC, owner&rsquo;s rep</td>
+            <td class="num">Free collaborator seats</td>
+            <td class="num bc-col">Free — same as Part3 here</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fine rv">Part3 pricing from <a href="https://www.part3.io/pricing" rel="nofollow">part3.io/pricing</a> as of July 2026: Core $150/user/mo, Complete $200/user/mo, billed annually; Part3 states annual subscriptions start at $9,000/yr. BuildCycle prices in USD, monthly billing shown; annual saves two months. Spot an error? <a href="mailto:support@buildcycle.io">Tell us and we&rsquo;ll fix it.</a></p>
+  </div>
+</section>
+
+<!-- ================= HONEST VERDICT ================= -->
+<section class="sec-concrete sec-pad" id="verdict">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <span class="tag"><b>SEC. 02</b> &nbsp;/&nbsp; Straight answers</span>
+        <h2>Where each<br><span class="pale">tool wins.</span></h2>
+      </div>
+      <p>If we only told you our half, you shouldn&rsquo;t trust any of it.</p>
+    </div>
+
+    <div class="tiers tiers--verdict">
+      <div class="tier rv">
+        <div class="tier-name">Pick Part3 if&hellip;</div>
+        <ul class="tier-feats">
+          <li>You want an AI submittal &amp; spec assistant today — it&rsquo;s their flagship and it&rsquo;s real</li>
+          <li>You need native mobile apps with offline mode in the field</li>
+          <li>E-stamps, seals, and digital signatures inside the tool matter to you</li>
+          <li>You want the more mature product with more integrations and years in market</li>
+        </ul>
+      </div>
+
+      <div class="tier tier--hot rv rv-d1">
+        <span class="tier-flag">Our case</span>
+        <div class="tier-name">Pick BuildCycle if&hellip;</div>
+        <ul class="tier-feats">
+          <li><b>You bill pay applications.</b> Certified owner sign-off by email, contract-value rollup — Part3 doesn&rsquo;t do pay apps at all</li>
+          <li>Two-signature change orders with live contract math</li>
+          <li>Owners and GCs participate by email — no login required of them</li>
+          <li>Two-way Procore sync on every tier</li>
+          <li>Flat, self-serve pricing from $39/mo — no sales call, no annual minimum</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="procore">
+  <div class="hazard hazard--thin" aria-hidden="true"></div>
+  <div class="wrap procore-inner">
+    <p class="procore-line rv">
+      <span class="sync">$39/mo</span>
+      Full construction administration — including the money workflows — at a fraction of a single Part3 seat.
+    </p>
+    <a class="procore-note rv rv-d1" href="/#updates">Join the waitlist</a>
+  </div>
+  <div class="hazard hazard--thin" aria-hidden="true"></div>
+</section>
+
+<!-- /PAGE CONTENT -->
+
+<!-- ================= SHARED FOOTER (do not modify) ================= -->
+<footer>
+  <div class="wrap foot">
+    <a class="wordmark" href="/"><img src="/assets/buildcycle-inverse.svg" alt="BuildCycle"></a>
+    <ul class="foot-links">
+      <li><a href="/pricing.html">Pricing</a></li>
+      <li><a href="/procore-integration.html">Procore Integration</a></li>
+      <li><a href="/terms.html">Terms</a></li>
+      <li><a href="/privacy.html">Privacy</a></li>
+      <li><a href="mailto:support@buildcycle.io">support@buildcycle.io</a></li>
+    </ul>
+    <span class="foot-legal">&copy; 2026 BuildCycle &middot; Built on job sites, not in boardrooms</span>
+  </div>
+</footer>
+
+<!-- ================= SHARED JS: reveals + mobile nav (do not modify) ================= -->
+<script>
+const io = new IntersectionObserver((entries) => {
+  for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.rv:not(.in)').forEach(el => io.observe(el));
+
+const burger = document.querySelector('.nav-burger');
+const menu = document.getElementById('nav-menu');
+burger.addEventListener('click', () => {
+  const open = menu.classList.toggle('open');
+  burger.setAttribute('aria-expanded', String(open));
+});
+menu.addEventListener('click', (e) => {
+  if (e.target.tagName === 'A') { menu.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); }
+});
+</script>
+
+</body>
+</html>
