@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- PER-PAGE: title + descriptions -->
+<title>Field Report Software for Architects — BuildCycle</title>
+<meta name="description" content="Stop writing field reports in Word. BuildCycle builds the report while you walk the site — observations marked on the plans, photos pinned in place, weather attached, clean PDF out. Punch lists included. From $39/mo.">
+<meta property="og:title" content="Field Report Software for Architects — BuildCycle">
+<meta property="og:description" content="Observations marked on the plans, photos pinned in place, weather attached, clean PDF out. The report writes itself while you walk the site.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://buildcycle.io/field-reports">
+
+<!-- SHARED: fonts + stylesheet (do not modify) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,500;10..72,700;10..72,800;10..72,900&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&family=Saira+Stencil+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+
+<!-- PER-PAGE: report walk-through styles -->
+<style>
+.walk{ border-top:1px dashed var(--hairline-d); }
+.step{
+  display:grid; grid-template-columns:110px minmax(0,1fr);
+  gap:28px; padding:34px 0 32px;
+  border-bottom:1px dashed var(--hairline-d);
+}
+.step-num{
+  font-family:var(--stencil); font-size:34px; line-height:1;
+  color:transparent; -webkit-text-stroke:1.2px var(--yellow);
+  padding-top:3px; white-space:nowrap;
+}
+.step h3{ color:var(--paper); font-size:25px; margin-bottom:12px; }
+.step p{ font-size:15.5px; line-height:1.65; color:var(--grey-mid); max-width:66ch; }
+.step p b{ color:var(--paper); font-weight:600; }
+@media (max-width:560px){
+  .step{ grid-template-columns:1fr; gap:12px; padding:26px 0 24px; }
+  .step-num{ font-size:27px; }
+}
+</style>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#15171A">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the best field report software for architects?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Architects need field report software that builds the report during the site visit, not after it: observations marked directly on the drawings, photos pinned to plan locations, weather attached automatically, and a clean PDF issued to the distribution list. BuildCycle does this from $39/month — and unlike report-only tools, the same platform also handles RFIs, submittals, change orders, and pay applications when you need them."}
+    },
+    {
+      "@type": "Question",
+      "name": "Can I mark observations directly on the drawings?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. In BuildCycle you drop a marker on the plan where the issue is, attach photos to that marker, and the observation carries its location with it — into the report PDF and the project record. No more 'see photo 14, somewhere on level 2.'"}
+    },
+    {
+      "@type": "Question",
+      "name": "Does BuildCycle replace writing reports in Word?",
+      "acceptedAnswer": {"@type": "Answer", "text": "That is exactly what it replaces. The report assembles itself from your site walk — observations, photos, weather, attendees — and exports as a formatted PDF you issue by email. The hours previously spent reformatting a Word document become a review-and-send."}
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ================= SHARED NAV (do not modify) ================= -->
+<header>
+  <div class="wrap nav">
+    <a class="wordmark" href="/"><img src="/assets/buildcycle-inverse.svg" alt="BuildCycle"></a>
+    <ul class="nav-links">
+      <li><a href="/#work">Workflows</a></li>
+      <li><a href="/procore-integration.html">Procore Integration</a></li>
+      <li><a href="/pricing.html">Pricing</a></li>
+      <li><a href="https://app.buildcycle.io">Sign in</a></li>
+    </ul>
+    <a class="nav-cta" href="/#updates">Join the waitlist</a>
+    <button class="nav-burger" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu">Menu</button>
+  </div>
+  <ul class="nav-menu" id="nav-menu">
+    <li><a href="/#work">Workflows</a></li>
+    <li><a href="/procore-integration.html">Procore Integration</a></li>
+    <li><a href="/pricing.html">Pricing</a></li>
+    <li><a href="https://app.buildcycle.io">Sign in</a></li>
+  </ul>
+</header>
+
+<!-- PAGE CONTENT -->
+
+<!-- ================= HERO ================= -->
+<section class="sec-dark sec-pad" style="padding-top: calc(var(--nav-h) + 80px);">
+  <div class="wrap">
+    <div class="sec-head sec-head--dark rv in">
+      <div>
+        <span class="tag"><b>FIELD REPORTS</b> &nbsp;/&nbsp; Where BuildCycle started</span>
+        <h2>Stop writing reports<br><span class="pale">in Word at 9pm.</span></h2>
+      </div>
+      <p>You walked the site at 10am. Why are you still formatting photos into a document at 9pm? BuildCycle builds the report <em>while you walk</em>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ORIGIN BAND ================= -->
+<section class="procore">
+  <div class="hazard hazard--thin" aria-hidden="true"></div>
+  <div class="wrap procore-inner">
+    <p class="procore-line rv">
+      <span class="sync">Day one</span>
+      BuildCycle was built by a practicing architect who was done losing evenings to Word. Field reports aren&rsquo;t a feature we added — they&rsquo;re the reason it exists.
+    </p>
+  </div>
+  <div class="hazard hazard--thin" aria-hidden="true"></div>
+</section>
+
+<!-- ================= THE WALK ================= -->
+<section class="sec-dark sec-pad" id="how">
+  <div class="wrap">
+    <div class="sec-head sec-head--dark rv">
+      <div>
+        <span class="tag"><b>SEC. 01</b> &nbsp;/&nbsp; One site walk, start to issued</span>
+        <h2>The report writes itself.<br><span class="pale">You just walk.</span></h2>
+      </div>
+      <p>Everything you capture in the field lands in the record, already organized.</p>
+    </div>
+
+    <div class="walk">
+      <div class="step rv">
+        <div class="step-num">01</div>
+        <div>
+          <h3>Mark it on the plans</h3>
+          <p>See an issue? <b>Drop a marker on the drawing where it is.</b> The observation carries its location forever — in the report, in the record, in the closeout. No more &ldquo;see photo 14, somewhere on level&nbsp;2.&rdquo;</p>
+        </div>
+      </div>
+      <div class="step rv">
+        <div class="step-num">02</div>
+        <div>
+          <h3>Photos, pinned in place</h3>
+          <p>Shoot from your phone or tablet; photos attach to the observation <b>and the marker it lives on</b>. The full photo archive stays organized by project, searchable long after the job closes.</p>
+        </div>
+      </div>
+      <div class="step rv">
+        <div class="step-num">03</div>
+        <div>
+          <h3>The context fills itself in</h3>
+          <p><b>Weather attaches automatically.</b> Who was observed on site and who attended is captured as a permanent snapshot — the legal record stays true even when people change firms later.</p>
+        </div>
+      </div>
+      <div class="step rv">
+        <div class="step-num">04</div>
+        <div>
+          <h3>Review, generate, issue</h3>
+          <p>Back at the truck: review, hit generate, and a <b>clean formatted PDF</b> goes to the distribution list — owner, GC, consultants, CC&rsquo;d as needed. The 9pm Word session is now a two-minute review.</p>
+        </div>
+      </div>
+      <div class="step rv">
+        <div class="step-num">05</div>
+        <div>
+          <h3>Punch lists that actually close</h3>
+          <p>Items tracked from <b>open to verified</b> — not a Word table that dies in an inbox. And when the job ends, the whole record — reports, photos, punch history — <b>exports as one zip.</b> It leaves with you.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= THE DOOR, NOT THE BUILDING ================= -->
+<section class="sec-concrete sec-pad" id="more">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <span class="tag"><b>SEC. 02</b> &nbsp;/&nbsp; Reports are the door, not the building</span>
+        <h2>Report-only tools<br><span class="pale">stop here.</span></h2>
+      </div>
+      <p>ArchiSnapper, Raken, and the report apps do one thing. The problem: your projects don&rsquo;t.</p>
+    </div>
+
+    <div class="tiers tiers--seatmath" style="grid-template-columns:repeat(2,minmax(0,1fr));max-width:900px;">
+      <div class="tier rv">
+        <div class="tier-name">Report-only apps</div>
+        <ul class="tier-feats">
+          <li>Field reports &amp; punch lists — and that&rsquo;s the ceiling</li>
+          <li>Priced per user (~$29&ndash;46/user/mo)</li>
+          <li>RFIs, submittals, COs, pay apps? A second subscription, somewhere else</li>
+        </ul>
+      </div>
+      <div class="tier tier--hot rv rv-d1">
+        <span class="tier-flag">Same money, whole platform</span>
+        <div class="tier-name">BuildCycle</div>
+        <ul class="tier-feats">
+          <li>Everything above — reports, plan markers, punch lists</li>
+          <li><b>Plus RFIs, submittals, change orders, pay apps</b> — on every tier</li>
+          <li>Flat from $39/mo, unlimited users, two-way Procore sync</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="pricing-foot rv">Comparing report tools? <a href="/archisnapper-alternative" style="color:var(--accent,#B45309);text-decoration:underline;">BuildCycle vs ArchiSnapper</a> &nbsp;&middot;&nbsp; <a href="/pricing.html" style="text-decoration:underline;">Full pricing</a></p>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="procore">
+  <div class="hazard hazard--thin" aria-hidden="true"></div>
+  <div class="wrap procore-inner">
+    <p class="procore-line rv">
+      <span class="sync">$39/mo</span>
+      Your next site visit could end at the truck, not at your desk.
+    </p>
+    <a class="procore-note rv rv-d1" href="/#updates">Join the waitlist</a>
+  </div>
+  <div class="hazard hazard--thin" aria-hidden="true"></div>
+</section>
+
+<!-- /PAGE CONTENT -->
+
+<!-- ================= SHARED FOOTER (do not modify) ================= -->
+<footer>
+  <div class="wrap foot">
+    <a class="wordmark" href="/"><img src="/assets/buildcycle-inverse.svg" alt="BuildCycle"></a>
+    <ul class="foot-links">
+      <li><a href="/pricing.html">Pricing</a></li>
+      <li><a href="/procore-integration.html">Procore Integration</a></li>
+      <li><a href="/terms.html">Terms</a></li>
+      <li><a href="/privacy.html">Privacy</a></li>
+      <li><a href="mailto:support@buildcycle.io">support@buildcycle.io</a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=61592217530657" target="_blank" rel="noopener" aria-label="BuildCycle on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94Z"/></svg></a></li>
+      <li><a href="https://www.linkedin.com/company/buildcycle-llc" target="_blank" rel="noopener" aria-label="BuildCycle on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg></a></li>
+      <li><a href="https://x.com/buildcycle_io" target="_blank" rel="noopener" aria-label="BuildCycle on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.59-6.64 7.59H.47l8.6-9.83L0 1.15h7.59l5.25 6.94 6.06-6.94Zm-1.29 19.5h2.04L6.49 3.24H4.3l13.31 17.4Z"/></svg></a></li>
+      <li><a href="https://www.instagram.com/buildcycle_io" target="_blank" rel="noopener" aria-label="BuildCycle on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.13 1.38A5.88 5.88 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.13a5.88 5.88 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.88 5.88 0 0 0 2.13-1.38 5.88 5.88 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84Zm0 10.15A3.99 3.99 0 1 1 16 12a3.99 3.99 0 0 1-4 3.99ZM19.85 5.59a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0Z"/></svg></a></li>
+    </ul>
+    <span class="foot-legal">&copy; 2026 BuildCycle &middot; Built on job sites, not in boardrooms</span>
+  </div>
+</footer>
+
+<!-- ================= SHARED JS: reveals + mobile nav (do not modify) ================= -->
+<script>
+const io = new IntersectionObserver((entries) => {
+  for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.rv:not(.in)').forEach(el => io.observe(el));
+
+const burger = document.querySelector('.nav-burger');
+const menu = document.getElementById('nav-menu');
+burger.addEventListener('click', () => {
+  const open = menu.classList.toggle('open');
+  burger.setAttribute('aria-expanded', String(open));
+});
+menu.addEventListener('click', (e) => {
+  if (e.target.tagName === 'A') { menu.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); }
+});
+</script>
+
+</body>
+</html>
